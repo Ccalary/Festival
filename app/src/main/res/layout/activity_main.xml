@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.example.caohouhong.festival.view.NavLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title = "网络请求"
+        app:isShowLeftBtn = "false"
+        >
+    </com.example.caohouhong.festival.view.NavLayout>
+
+    <Button
+        android:id="@+id/id_main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转"
+        />
+    <Button
+        android:id="@+id/id_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络请求界面"
+        />
+
+    <Button
+        android:id="@+id/id_ui_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UIButton"
+        android:textAllCaps="false"
+        />
+    <android.support.design.widget.TabLayout
+        android:id="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/colorBlack"
+        app:tabIndicatorColor="@color/colorMain"
+        app:tabSelectedTextColor="@color/colorMain"
+        >
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>
