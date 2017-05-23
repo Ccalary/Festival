@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<android.support.percent.PercentFrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.example.caohouhong.festival.view.NavLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        >
+        android:layout_height="wrap_content"
+        app:title="百分比">
+    </com.example.caohouhong.festival.view.NavLayout>
 
 
-    <Button
-        android:id="@+id/button1"
-        app:layout_heightPercent = "50%"
-        app:layout_widthPercent = "50%"
-        android:text="button1"
-        />
-    <Button
-        android:layout_gravity="right"
-        app:layout_widthPercent = "50%"
-        app:layout_heightPercent = "40%"/>
+    <android.support.percent.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button1"
+            android:text="button1"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_gravity="right"
+            app:layout_heightPercent="40%"
+            app:layout_widthPercent="50%" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_gravity="right"
+            android:layout_marginTop="200dp"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"
+            android:background="@color/colorMain"
+            />
+    </android.support.percent.PercentFrameLayout>
 
 
-</android.support.percent.PercentFrameLayout>
-
-
+</LinearLayout>

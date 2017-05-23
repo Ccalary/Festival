@@ -7,6 +7,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -60,8 +61,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         registerReceiver(networkChangeReceiver, intentFilter);
 
         initView();
-
-        doTheAlgorithm();
     }
 
     @Override
@@ -129,31 +128,32 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         Intent intent = new Intent();
         switch (v.getId()){
             case R.id.id_main_button:
+
                 intent.setClass(this, MeActivity.class);
                 startActivityForResult(intent, 1);
                 break;
             case R.id.id_btn2:
-//                intent.setClass(this, BrandActivity.class);
-//                startActivity(intent);
-                /**
-                 * 取出数据
-                 */
-                SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
-                String name = pref.getString("name","");
-                btn2.setText(name);
+                intent.setClass(this, BrandActivity.class);
+                startActivity(intent);
+//                /**
+//                 * 取出数据
+//                 */
+//                SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
+//                String name = pref.getString("name","");
+//                btn2.setText(name);
 
                 break;
             case R.id.id_ui_button:
-//                 PercentViewActivity.actionStart(MainActivity.this, "data1", "data2");
+                 PercentViewActivity.actionStart(MainActivity.this, "data1", "data2");
 
-                /**
-                 * 存储数据
-                 */
-                SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
-                editor.putString("name","Tony");
-                editor.putInt("age",28);
-                editor.putBoolean("married", false);
-                editor.apply();
+//                /**
+//                 * 存储数据
+//                 */
+//                SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
+//                editor.putString("name","Tony");
+//                editor.putInt("age",28);
+//                editor.putBoolean("married", false);
+//                editor.apply();
 
                 break;
         }
